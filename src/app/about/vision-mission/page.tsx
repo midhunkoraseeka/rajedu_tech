@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function VisionMissionPage() {
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>About Raj Edutech</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -22,7 +22,7 @@ export default function VisionMissionPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container className="max-w-3xl">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div className="rounded-2xl border border-border bg-white p-8">

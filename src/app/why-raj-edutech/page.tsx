@@ -43,7 +43,7 @@ const comparisonRows = [
 export default function WhyRajEdutechPage() {
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>Why Raj Edutech</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -58,7 +58,7 @@ export default function WhyRajEdutechPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container>
           <div className="overflow-x-auto rounded-2xl border border-border bg-white">
             <table className="w-full min-w-[640px] border-collapse text-left">

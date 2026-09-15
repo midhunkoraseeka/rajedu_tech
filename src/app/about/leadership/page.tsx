@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function LeadershipPage() {
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>About Raj Edutech</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -27,7 +27,7 @@ export default function LeadershipPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container className="max-w-2xl">
           <div className="flex flex-col items-start gap-4 rounded-2xl border border-dashed border-border-strong bg-white p-8">
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-light text-blue">

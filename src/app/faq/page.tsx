@@ -28,7 +28,7 @@ export default function FaqPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>FAQ</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -42,7 +42,7 @@ export default function FaqPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container className="max-w-3xl">
           <div className="flex flex-col gap-14">
             {categories.map((category) => {

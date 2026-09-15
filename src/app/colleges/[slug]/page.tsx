@@ -47,7 +47,7 @@ export default async function CollegeDetailPage({
 
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-4xl">
           <nav aria-label="Breadcrumb" className="text-[13.5px] text-ink-soft">
             <Link href="/colleges" className="hover:text-blue">
@@ -98,7 +98,7 @@ export default async function CollegeDetailPage({
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <div>
@@ -151,7 +151,7 @@ export default async function CollegeDetailPage({
         whatsappMessage={`Hi Raj Edutech, I'd like guidance on admission to ${college.name}.`}
       />
 
-      <Section className="pt-0 sm:pt-0">
+      <Section spacingTop="none">
         <Container>
           <div className="flex flex-col items-start gap-4 rounded-2xl border border-dashed border-border-strong p-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-lg text-[14px] leading-relaxed text-ink-soft">

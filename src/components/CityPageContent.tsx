@@ -14,7 +14,7 @@ export function CityPageContent({ citySlug }: { citySlug: CitySlug }) {
 
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>{city.state}</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -24,7 +24,7 @@ export function CityPageContent({ citySlug }: { citySlug: CitySlug }) {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container>
           <SectionHeading title="Why families choose colleges here" className="mb-0" />
           <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">

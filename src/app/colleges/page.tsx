@@ -25,7 +25,7 @@ export default async function CollegesPage({
 
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>Top Colleges</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -41,7 +41,7 @@ export default async function CollegesPage({
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container>
           <CollegeExplorer initialCity={initialCity} initialProgram={initialProgram} />
         </Container>

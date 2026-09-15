@@ -47,7 +47,7 @@ export default async function ProgramPage({
 
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-blue shadow-sm">
             <ProgramIcon icon={program.icon} className="h-6 w-6" />
@@ -68,7 +68,7 @@ export default async function ProgramPage({
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container className="max-w-3xl">
           <SectionHeading title="Who this is for" className="mb-0" />
           <ul className="mt-8 flex flex-col gap-4">

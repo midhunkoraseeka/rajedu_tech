@@ -57,7 +57,7 @@ export default async function BlogPostPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <nav aria-label="Breadcrumb" className="text-[13.5px] text-ink-soft">
             <Link href="/blog" className="hover:text-blue">Blog</Link>

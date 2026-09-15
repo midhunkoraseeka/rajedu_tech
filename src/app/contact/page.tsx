@@ -22,7 +22,7 @@ const channels = [
 export default function ContactPage() {
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>Contact</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -36,7 +36,7 @@ export default function ContactPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {channels.map((c) => (

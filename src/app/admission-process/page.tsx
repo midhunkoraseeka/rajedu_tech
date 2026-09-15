@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function AdmissionProcessPage() {
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>How It Works</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -31,7 +31,7 @@ export default function AdmissionProcessPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-14">
+      <Section tone="blue" spacingTop="sm">
         <Container className="max-w-4xl">
           <AdmissionTimeline />
         </Container>

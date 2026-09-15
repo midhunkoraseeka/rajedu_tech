@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   async redirects() {
     return [
       { source: "/management-quota-admissions", destination: "/management-quota", permanent: true },

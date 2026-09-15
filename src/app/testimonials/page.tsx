@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function TestimonialsPage() {
   return (
     <>
-      <Section tone="blue" className="pb-0 sm:pb-0">
+      <Section tone="blue" spacingBottom="none">
         <Container className="max-w-3xl">
           <Eyebrow>Testimonials</Eyebrow>
           <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-blue-dark text-balance">
@@ -28,7 +28,7 @@ export default function TestimonialsPage() {
         </Container>
       </Section>
 
-      <Section tone="blue" className="pt-10">
+      <Section tone="blue" spacingTop="sm">
         <Container>
           <TestimonialCarousel testimonials={testimonials} />
         </Container>
