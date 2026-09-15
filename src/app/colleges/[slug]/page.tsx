@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CheckCircle2, MapPin, Building2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -47,7 +48,7 @@ export default async function CollegeDetailPage({
   return (
     <>
       <Section tone="blue" className="pb-0 sm:pb-0">
-        <Container className="max-w-3xl">
+        <Container className="max-w-4xl">
           <nav aria-label="Breadcrumb" className="text-[13.5px] text-ink-soft">
             <Link href="/colleges" className="hover:text-blue">
               Colleges
@@ -57,10 +58,26 @@ export default async function CollegeDetailPage({
               {city.name}
             </Link>
           </nav>
-          <div className="mt-4 flex items-center gap-3">
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-blue shadow-sm">
-              <Building2 className="h-6 w-6" />
-            </span>
+
+          {college.image ? (
+            <div className="relative mt-5 aspect-[16/8] w-full overflow-hidden rounded-2xl border border-border shadow-sm sm:aspect-[16/6]">
+              <Image
+                src={college.image}
+                alt={college.name}
+                fill
+                priority
+                sizes="(min-width: 1024px) 896px, 100vw"
+                className="object-cover"
+              />
+            </div>
+          ) : null}
+
+          <div className="mt-5 flex items-center gap-3">
+            {college.image ? null : (
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-blue shadow-sm">
+                <Building2 className="h-6 w-6" />
+              </span>
+            )}
             <div className="flex flex-wrap gap-2">
               {college.programs.map((p) => (
                 <span key={p} className="rounded-full bg-white px-3 py-1 text-[12.5px] font-semibold text-blue-dark shadow-sm">
@@ -110,7 +127,9 @@ export default async function CollegeDetailPage({
                         {seat.branchesOrSpecialisations.join(" · ")}
                       </p>
                       <p className="mt-1 text-[14px] text-ink-soft">
-                        Indicative annual fee: {seat.indicativeAnnualFee}
+                        {/^contact/i.test(seat.indicativeAnnualFee)
+                          ? seat.indicativeAnnualFee
+                          : `Indicative annual fee: ${seat.indicativeAnnualFee}`}
                       </p>
                     </div>
                   );

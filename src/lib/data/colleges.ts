@@ -14,40 +14,168 @@ export interface College {
   shortName: string;
   city: CitySlug;
   programs: ProgramSlug[];
-  type: "Private" | "Deemed university" | "Autonomous";
+  type: "Private" | "Government" | "Deemed university" | "Autonomous";
   established: number;
   approval: string;
   location: string;
   website?: string;
+  image?: string;
   verified: boolean;
   summary: string;
   highlights: string[];
   seats: CollegeSeatInfo[];
 }
 
-// Illustrative directory. Names, fees and seat details are representative
-// placeholders for the site structure — replace with Raj Edutech's verified,
-// current college list before this goes live. `verified: false` marks every
-// entry here as unconfirmed; nothing should be taken as confirmation of a
-// partnership, seat availability or fee until that flag is flipped.
+const CONTACT_FOR_FEE = "Contact us for current fee details";
+
+// The BTech/engineering entries below are real institutions (per Raj
+// Edutech's provided list); the MBBS and MBA entries are still an
+// illustrative, placeholder directory pending a verified list — replace
+// those before this goes live. `verified: false` marks every entry as not
+// yet confirmed with the institution directly by Raj Edutech; nothing here
+// should be taken as confirmation of a partnership, seat availability or
+// fee until that flag is flipped. Indicative fees for the real engineering
+// colleges are intentionally left as "contact us" rather than a guessed
+// figure, since these are identifiable real institutions.
 export const colleges: College[] = [
   {
-    id: "col-hyd-eng-1",
-    slug: "deccan-institute-of-engineering",
-    name: "Deccan Institute of Engineering",
-    shortName: "DIE",
+    id: "col-hyd-eng-jntuh",
+    slug: "jntuh-college-of-engineering-hyderabad",
+    name: "JNTUH College of Engineering Hyderabad",
+    shortName: "JNTUH CEH",
     city: "hyderabad",
     programs: ["engineering"],
-    type: "Private",
-    established: 1998,
-    approval: "AICTE-approved, affiliated to JNTU Hyderabad",
-    location: "Hyderabad, Telangana",
+    type: "Government",
+    established: 1965,
+    approval: "AICTE-approved; constituent college of Jawaharlal Nehru Technological University Hyderabad (JNTUH)",
+    location: "Kukatpally, Hyderabad, Telangana",
+    image: "/b_tech/JNTUH.webp",
     verified: false,
     summary:
-      "A mid-sized engineering college with a long-running placement cell and a broad spread of core and computing branches.",
-    highlights: ["Established placement partnerships", "Hostel and transport for outstation students", "Labs upgraded within the last five years"],
+      "A government-run constituent engineering college of JNTUH, with a long academic history and admissions driven mainly by state counseling rather than a broad management quota pool.",
+    highlights: [
+      "Government constituent college of JNTUH, not a private institution",
+      "Long-established core and computing branches",
+      "Admissions primarily through TS EAMCET/EAPCET counseling; seat availability outside that route is limited",
+    ],
     seats: [
-      { program: "engineering", branchesOrSpecialisations: ["CSE", "ECE", "Mechanical", "Civil"], indicativeAnnualFee: "₹1.1L – ₹2.4L" },
+      {
+        program: "engineering",
+        branchesOrSpecialisations: ["CSE", "ECE", "EEE", "Mechanical", "Civil", "IT"],
+        indicativeAnnualFee: CONTACT_FOR_FEE,
+      },
+    ],
+  },
+  {
+    id: "col-hyd-eng-cbit",
+    slug: "chaitanya-bharathi-institute-of-technology",
+    name: "Chaitanya Bharathi Institute of Technology",
+    shortName: "CBIT",
+    city: "hyderabad",
+    programs: ["engineering"],
+    type: "Autonomous",
+    established: 1979,
+    approval: "AICTE-approved, UGC-autonomous institute affiliated to Osmania University",
+    location: "Gandipet, Hyderabad, Telangana",
+    image: "/b_tech/CBIT.webp",
+    verified: false,
+    summary:
+      "A long-established, UGC-autonomous private engineering college and one of Hyderabad's more sought-after institutions for computing and core branches.",
+    highlights: [
+      "UGC-autonomous status",
+      "Well-regarded computing and core engineering branches",
+      "Established recruiter relationships and placement cell",
+    ],
+    seats: [
+      {
+        program: "engineering",
+        branchesOrSpecialisations: ["CSE", "IT", "ECE", "EEE", "Mechanical", "Civil"],
+        indicativeAnnualFee: CONTACT_FOR_FEE,
+      },
+    ],
+  },
+  {
+    id: "col-hyd-eng-vnrvjiet",
+    slug: "vnr-vignana-jyothi-institute-of-engineering-and-technology",
+    name: "VNR Vignana Jyothi Institute of Engineering and Technology",
+    shortName: "VNR VJIET",
+    city: "hyderabad",
+    programs: ["engineering"],
+    type: "Autonomous",
+    established: 1995,
+    approval: "AICTE-approved, UGC-autonomous institute affiliated to JNTUH",
+    location: "Bachupally, Hyderabad, Telangana",
+    image: "/b_tech/VNR_VJIET.webp",
+    verified: false,
+    summary:
+      "A UGC-autonomous private engineering college with a modern campus and a strong industry-connect programme across computing and core branches.",
+    highlights: [
+      "UGC-autonomous status",
+      "Active industry-connect and placement programme",
+      "Modern, well-equipped campus facilities",
+    ],
+    seats: [
+      {
+        program: "engineering",
+        branchesOrSpecialisations: ["CSE", "IT", "ECE", "EEE", "Mechanical", "Civil"],
+        indicativeAnnualFee: CONTACT_FOR_FEE,
+      },
+    ],
+  },
+  {
+    id: "col-hyd-eng-ou",
+    slug: "osmania-university",
+    name: "Osmania University",
+    shortName: "OU",
+    city: "hyderabad",
+    programs: ["engineering"],
+    type: "Government",
+    established: 1918,
+    approval: "UGC-recognised state university; engineering programmes offered through its University College of Engineering",
+    location: "Osmania University campus, Amberpet, Hyderabad, Telangana",
+    image: "/b_tech/Osmania.png",
+    verified: false,
+    summary:
+      "One of India's oldest state universities, with a long-standing engineering college. Admissions are driven mainly by state counseling rather than a broad management quota pool.",
+    highlights: [
+      "One of India's oldest and most established universities",
+      "Long-standing University College of Engineering",
+      "Admissions primarily through TS EAMCET/EAPCET counseling; seat availability outside that route is limited",
+    ],
+    seats: [
+      {
+        program: "engineering",
+        branchesOrSpecialisations: ["CSE", "ECE", "EEE", "Mechanical", "Civil"],
+        indicativeAnnualFee: CONTACT_FOR_FEE,
+      },
+    ],
+  },
+  {
+    id: "col-hyd-eng-vasavi",
+    slug: "vasavi-college-of-engineering",
+    name: "Vasavi College of Engineering",
+    shortName: "Vasavi",
+    city: "hyderabad",
+    programs: ["engineering"],
+    type: "Autonomous",
+    established: 1981,
+    approval: "AICTE-approved, UGC-autonomous institute affiliated to Osmania University",
+    location: "Ibrahimbagh, Hyderabad, Telangana",
+    image: "/b_tech/Vasavi.jpg",
+    verified: false,
+    summary:
+      "A well-regarded, UGC-autonomous private engineering college in Hyderabad with a long-standing reputation across core and computing branches.",
+    highlights: [
+      "UGC-autonomous status",
+      "Well-regarded core and computing branches",
+      "Established private engineering college in Hyderabad",
+    ],
+    seats: [
+      {
+        program: "engineering",
+        branchesOrSpecialisations: ["CSE", "IT", "ECE", "EEE", "Mechanical", "Civil"],
+        indicativeAnnualFee: CONTACT_FOR_FEE,
+      },
     ],
   },
   {
@@ -85,25 +213,6 @@ export const colleges: College[] = [
     seats: [{ program: "management", branchesOrSpecialisations: ["Finance", "Marketing", "HR", "Business Analytics"], indicativeAnnualFee: "₹1.5L – ₹3L" }],
   },
   {
-    id: "col-blr-eng-1",
-    slug: "silicon-valley-institute-of-technology",
-    name: "Silicon Valley Institute of Technology",
-    shortName: "SVIT",
-    city: "bangalore",
-    programs: ["engineering"],
-    type: "Private",
-    established: 2003,
-    approval: "AICTE-approved, affiliated to VTU",
-    location: "Bangalore, Karnataka",
-    verified: false,
-    summary:
-      "An engineering college with a strong campus placement pipeline into Bangalore's IT and product companies.",
-    highlights: ["Placement pipeline into IT and product companies", "Modern computing labs", "Active coding and hackathon culture"],
-    seats: [
-      { program: "engineering", branchesOrSpecialisations: ["CSE", "ISE", "AI & ML", "Electronics"], indicativeAnnualFee: "₹1.8L – ₹3.2L" },
-    ],
-  },
-  {
     id: "col-blr-med-1",
     slug: "vidyanagar-medical-sciences",
     name: "Vidyanagar Institute of Medical Sciences",
@@ -136,25 +245,6 @@ export const colleges: College[] = [
       "A well-regarded autonomous management institute with a strong analytics and product management specialisation track.",
     highlights: ["Strong analytics and product management track", "Live industry projects", "Dedicated corporate relations cell"],
     seats: [{ program: "management", branchesOrSpecialisations: ["Analytics", "Product Management", "Marketing", "Finance"], indicativeAnnualFee: "₹2L – ₹4L" }],
-  },
-  {
-    id: "col-che-eng-1",
-    slug: "coromandel-college-of-engineering",
-    name: "Coromandel College of Engineering",
-    shortName: "CCE",
-    city: "chennai",
-    programs: ["engineering"],
-    type: "Private",
-    established: 1989,
-    approval: "AICTE-approved, affiliated to Anna University",
-    location: "Chennai, Tamil Nadu",
-    verified: false,
-    summary:
-      "One of the city's longer-established engineering colleges, known for its core mechanical and civil branches.",
-    highlights: ["Strong core-branch reputation", "Long-standing recruiter relationships", "Active alumni mentorship"],
-    seats: [
-      { program: "engineering", branchesOrSpecialisations: ["Mechanical", "Civil", "CSE", "EEE"], indicativeAnnualFee: "₹0.9L – ₹2L" },
-    ],
   },
   {
     id: "col-che-med-1",

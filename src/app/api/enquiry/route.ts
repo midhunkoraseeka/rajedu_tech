@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { cityValues, programValues } from "@/lib/validation";
+import { sendEnquiryEmail } from "@/lib/mail";
 
 interface EnquiryPayload {
   name?: string;
@@ -50,19 +51,26 @@ export async function POST(request: Request) {
   }
 
   const enquiry = {
-    name: body.name,
-    phone: body.phone,
+    name: body.name as string,
+    phone: body.phone as string,
     email: body.email || undefined,
-    city: body.city,
-    program: body.program,
+    city: body.city as string,
+    program: body.program as string,
     preferredCollege: body.preferredCollege || undefined,
     message: body.message || undefined,
     receivedAt: new Date().toISOString(),
   };
 
-  // Forward to a real delivery channel when one is configured (see
-  // .env.example). Until ENQUIRY_WEBHOOK_URL is set, enquiries are only
-  // logged — wire this up to an email service or CRM before launch.
+  // Email the enquiry to the company inbox when SMTP is configured (see
+  // .env.example). Also forward to a webhook (CRM/Zapier/etc.) when set.
+  // If neither is configured, the enquiry is only logged server-side.
+  let emailed = false;
+  try {
+    emailed = await sendEnquiryEmail(enquiry);
+  } catch (err) {
+    console.error("Failed to email enquiry:", err);
+  }
+
   const webhookUrl = process.env.ENQUIRY_WEBHOOK_URL;
   if (webhookUrl) {
     try {
@@ -74,8 +82,10 @@ export async function POST(request: Request) {
     } catch (err) {
       console.error("Failed to forward enquiry to webhook:", err);
     }
-  } else {
-    console.log("New admission enquiry (no ENQUIRY_WEBHOOK_URL configured):", enquiry);
+  }
+
+  if (!emailed && !webhookUrl) {
+    console.log("New admission enquiry (no SMTP_USER/SMTP_PASS or ENQUIRY_WEBHOOK_URL configured):", enquiry);
   }
 
   return NextResponse.json({ ok: true });

@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
+import { useMounted } from "@/lib/useMounted";
 import { navItems } from "@/lib/data/navigation";
 import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/constants";
@@ -12,6 +14,7 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const [prevPathname, setPrevPathname] = useState(pathname);
+  const mounted = useMounted();
 
   if (pathname !== prevPathname) {
     setPrevPathname(pathname);
@@ -46,7 +49,8 @@ export function MobileNav() {
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
 
-      {open ? (
+      {open && mounted
+        ? createPortal(
         <div id="mobile-nav-panel" className="fixed inset-x-0 top-[76px] bottom-0 z-30 overflow-y-auto bg-white">
           <nav aria-label="Mobile" className="flex flex-col px-5 py-6">
             <ul className="flex flex-col divide-y divide-border">
@@ -93,8 +97,10 @@ export function MobileNav() {
               </a>
             </div>
           </nav>
-        </div>
-      ) : null}
+        </div>,
+            document.body
+          )
+        : null}
     </div>
   );
 }

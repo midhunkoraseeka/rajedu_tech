@@ -4,6 +4,8 @@ import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { CTASection } from "@/components/CTASection";
 import { CollegeExplorer } from "@/components/CollegeExplorer";
+import { cities, type CitySlug } from "@/lib/data/cities";
+import { programs, type ProgramSlug } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
   title: "Colleges Directory",
@@ -12,7 +14,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/colleges" },
 };
 
-export default function CollegesPage() {
+export default async function CollegesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ city?: string; program?: string }>;
+}) {
+  const { city, program } = await searchParams;
+  const initialCity = cities.some((c) => c.slug === city) ? (city as CitySlug) : undefined;
+  const initialProgram = programs.some((p) => p.slug === program) ? (program as ProgramSlug) : undefined;
+
   return (
     <>
       <Section tone="blue" className="pb-0 sm:pb-0">
@@ -33,7 +43,7 @@ export default function CollegesPage() {
 
       <Section tone="blue" className="pt-10">
         <Container>
-          <CollegeExplorer />
+          <CollegeExplorer initialCity={initialCity} initialProgram={initialProgram} />
         </Container>
       </Section>
 

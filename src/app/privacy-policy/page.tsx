@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
               information we hold about you, subject to any legal or
               administrative requirement to retain admission-related records.
               To make a request, contact us at{" "}
-              <a href={`mailto:${EMAIL}`} className="text-blue underline underline-offset-4">
+              <a href={`mailto:${EMAIL}`} className="break-all text-blue underline underline-offset-4">
                 {EMAIL}
               </a>
               .
@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
             <p className="mt-3">
               If you have questions about this policy or how your information
               is handled, write to us at{" "}
-              <a href={`mailto:${EMAIL}`} className="text-blue underline underline-offset-4">
+              <a href={`mailto:${EMAIL}`} className="break-all text-blue underline underline-offset-4">
                 {EMAIL}
               </a>
               .

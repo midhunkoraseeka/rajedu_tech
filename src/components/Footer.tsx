@@ -26,8 +26,8 @@ export function Footer() {
               >
                 <WhatsAppIcon className="h-4 w-4" /> WhatsApp us
               </a>
-              <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 text-white/80 hover:text-white">
-                <Mail className="h-4 w-4" /> {EMAIL}
+              <a href={`mailto:${EMAIL}`} className="flex items-start gap-2 text-white/80 hover:text-white">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0" /> <span className="break-all">{EMAIL}</span>
               </a>
             </div>
           </div>

@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-blue-light">
       <span className="pointer-events-none absolute -left-32 top-1/3 h-72 w-72 rounded-full bg-blue/10 blur-3xl" aria-hidden />
-      <Container className="relative grid grid-cols-1 gap-12 py-14 sm:py-20 lg:grid-cols-[1.05fr_0.85fr_0.85fr] lg:items-center lg:gap-8 lg:py-24">
+      <Container className="relative grid grid-cols-1 gap-12 py-10 sm:py-12 lg:grid-cols-[1.05fr_0.85fr_0.85fr] lg:items-start lg:gap-8 lg:py-12">
         <div>
           <Reveal variants={fadeDown}>
             <Eyebrow>Your Future. Our Guidance.</Eyebrow>

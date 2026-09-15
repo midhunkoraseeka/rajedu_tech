@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, Phone } from "lucide-react";
@@ -16,6 +16,17 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
+  const searchTriggerRef = useRef<HTMLButtonElement | null>(null);
+
+  function openSearch(e: React.MouseEvent<HTMLButtonElement>) {
+    searchTriggerRef.current = e.currentTarget;
+    setSearchOpen(true);
+  }
+
+  function closeSearch() {
+    setSearchOpen(false);
+    searchTriggerRef.current?.focus();
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -48,14 +59,14 @@ export function Header() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "relative flex items-center px-3.5 py-2 text-[14.5px] font-semibold transition-colors",
+                      "relative flex items-center whitespace-nowrap px-2 py-2 text-[13.5px] font-semibold transition-colors xl:px-2.5 xl:text-[14px]",
                       active ? "text-blue" : "text-ink hover:text-blue"
                     )}
                   >
                     {item.label}
                     <span
                       className={cn(
-                        "absolute bottom-0.5 left-3.5 right-3.5 h-[2px] rounded-full bg-lime transition-transform duration-200 origin-left",
+                        "absolute bottom-0.5 left-2 right-2 h-[2px] rounded-full bg-lime transition-transform duration-200 origin-left xl:left-2.5 xl:right-2.5",
                         active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       )}
                     />
@@ -85,7 +96,7 @@ export function Header() {
         <div className="hidden items-center gap-2 lg:flex">
           <button
             type="button"
-            onClick={() => setSearchOpen(true)}
+            onClick={openSearch}
             aria-label="Search the site"
             className="flex h-10 w-10 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-blue-light hover:text-blue"
           >
@@ -93,20 +104,22 @@ export function Header() {
           </button>
           <a
             href={`tel:${PHONE_TEL}`}
-            className="flex items-center gap-1.5 px-2 text-[13.5px] font-semibold text-ink-soft hover:text-blue"
+            aria-label={`Call ${PHONE_DISPLAY}`}
+            className="hidden items-center gap-1.5 rounded-full px-2 py-2 text-[13.5px] font-semibold text-ink-soft transition-colors hover:bg-blue-light hover:text-blue xl:flex"
           >
-            <Phone className="h-3.5 w-3.5" />
-            {PHONE_DISPLAY}
+            <Phone className="h-3.5 w-3.5 shrink-0" />
+            <span className="whitespace-nowrap">{PHONE_DISPLAY}</span>
           </a>
-          <Button href="/enquiry" withArrow className="ml-1">
-            Get Admission Guidance
+          <Button href="/enquiry" withArrow className="ml-1 whitespace-nowrap">
+            <span className="xl:hidden">Get Guidance</span>
+            <span className="hidden xl:inline">Get Admission Guidance</span>
           </Button>
         </div>
 
         <div className="flex items-center gap-1 lg:hidden">
           <button
             type="button"
-            onClick={() => setSearchOpen(true)}
+            onClick={openSearch}
             aria-label="Search the site"
             className="flex h-10 w-10 items-center justify-center rounded-full text-ink-soft"
           >
@@ -116,7 +129,7 @@ export function Header() {
         </div>
       </div>
 
-      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
+      <SearchOverlay open={searchOpen} onClose={closeSearch} />
     </header>
   );
 }

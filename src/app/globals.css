@@ -44,6 +44,9 @@ body {
   background: var(--color-background);
   color: var(--color-ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  /* clip (not hidden) so scroll-reveal transforms can't create a horizontal
+     scrollbar, while still allowing the sticky header to stick. */
+  overflow-x: clip;
 }
 
 ::selection {

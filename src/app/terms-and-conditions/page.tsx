@@ -115,7 +115,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-[700] text-ink">9. Contact us</h2>
             <p className="mt-3">
               Questions about these terms can be sent to{" "}
-              <a href={`mailto:${EMAIL}`} className="text-blue underline underline-offset-4">
+              <a href={`mailto:${EMAIL}`} className="break-all text-blue underline underline-offset-4">
                 {EMAIL}
               </a>
               .

@@ -15,13 +15,15 @@ export const fadeDown: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
 };
 
+/* x offsets stay under the 20px mobile page gutter so a mid-reveal element
+   can never poke past the viewport edge. */
 export const slideLeft: Variants = {
-  hidden: { opacity: 0, x: 24 },
+  hidden: { opacity: 0, x: 16 },
   show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
 };
 
 export const slideRight: Variants = {
-  hidden: { opacity: 0, x: -24 },
+  hidden: { opacity: 0, x: -16 },
   show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
 };
 

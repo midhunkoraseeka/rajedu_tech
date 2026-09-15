@@ -46,7 +46,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <h3 className="text-[15px] font-bold text-blue-dark">{c.title}</h3>
-                  <p className="mt-1 text-[15px] text-ink">{c.detail}</p>
+                  <p className="mt-1 break-all text-[15px] text-ink">{c.detail}</p>
                   <p className="mt-1 flex items-center gap-1.5 text-[12.5px] text-ink-soft">
                     <Clock className="h-3.5 w-3.5" /> {c.note}
                   </p>
