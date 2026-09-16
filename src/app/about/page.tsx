@@ -12,7 +12,7 @@ import { CITIES_SERVED } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Raj Edutech is an independent admission guidance consultancy for management quota BTech, MBBS and MBA seats — not a college, and not affiliated with one.",
+    "Raj Edutech is an independent admission guidance consultancy for management quota BTech, MBBS and BBA/MBA seats — not a college, and not affiliated with one.",
   alternates: { canonical: "/about" },
 };
 
@@ -70,7 +70,7 @@ export default function AboutPage() {
               ourselves as one. Our role is to sit on your side of the
               table: understanding your academic profile, budget and city
               preference, and matching that against realistic options
-              across BTech, MBBS and MBA management quota seats.
+              across BTech, MBBS and BBA/MBA management quota seats.
             </p>
             <p>
               That also means we won&apos;t tell you what you want to hear

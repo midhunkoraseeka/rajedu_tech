@@ -14,7 +14,7 @@ export function Footer() {
             <Logo inverted />
             <p className="mt-5 max-w-xs text-[14.5px] leading-relaxed text-white/65">
               Independent admission guidance for management quota BTech, MBBS
-              and MBA seats in {CITIES_SERVED.join(", ")}.
+              and BBA/MBA seats in {CITIES_SERVED.join(", ")}.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 text-[14.5px]">
               <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-2 text-white/80 hover:text-white">

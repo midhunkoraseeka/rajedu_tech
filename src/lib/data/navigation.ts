@@ -18,7 +18,7 @@ export const navItems: NavItem[] = [
     children: [
       { label: "BTech / Engineering", href: "/management-quota/engineering", description: "Engineering, all branches" },
       { label: "MBBS / Medical", href: "/management-quota/medical", description: "Medical, private colleges" },
-      { label: "MBA / Management", href: "/management-quota/management", description: "Management & PGDM" },
+      { label: "BBA/MBA / Management", href: "/management-quota/management", description: "Management & PGDM" },
     ],
   },
   {
@@ -71,7 +71,7 @@ export const footerColumns = [
     links: [
       { label: "BTech / Engineering", href: "/management-quota/engineering" },
       { label: "MBBS / Medical", href: "/management-quota/medical" },
-      { label: "MBA / Management", href: "/management-quota/management" },
+      { label: "BBA/MBA / Management", href: "/management-quota/management" },
     ],
   },
   {

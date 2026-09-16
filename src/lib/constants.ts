@@ -1,5 +1,5 @@
 export const SITE_NAME = "Raj Edutech";
-export const SITE_TAGLINE = "Management quota admission guidance for BTech, MBBS and MBA";
+export const SITE_TAGLINE = "Management quota admission guidance for BTech, MBBS and BBA/MBA";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.rajedutech.in";
 
 export const PHONE_DISPLAY = "+91 75595 67655";

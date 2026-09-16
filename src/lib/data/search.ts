@@ -128,7 +128,7 @@ export const searchIndex = buildSearchIndex();
 export const popularSearches = [
   "BTech",
   "MBBS",
-  "MBA",
+  "BBA/MBA",
   "Hyderabad",
   "Bangalore",
   "Chennai",

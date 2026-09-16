@@ -115,23 +115,25 @@ export const programs: Program[] = [
   },
   {
     slug: "management",
-    shortName: "MBA",
-    name: "MBA / Management",
-    fullName: "MBA Admissions",
+    shortName: "BBA/MBA",
+    name: "BBA/MBA / Management",
+    fullName: "BBA/MBA Admissions",
     icon: "bar-chart",
     summary:
-      "Guidance for management quota MBA and PGDM seats at AICTE-approved and university-affiliated business schools.",
+      "Guidance for management quota BBA, MBA and PGDM seats at AICTE-approved and university-affiliated business schools.",
     description:
-      "MBA management quota admissions give you more flexibility than engineering or medicine, but the range in placement quality and fee structure across colleges is wide. We help you evaluate colleges on outcomes that matter — specialization strength, average placement, and total cost — not just brand recall.",
+      "BBA and MBA management quota admissions give you more flexibility than engineering or medicine, but the range in placement quality and fee structure across colleges is wide. We help you evaluate colleges on outcomes that matter — specialization strength, average placement, and total cost — not just brand recall.",
     whoItsFor: [
+      "12th-pass students weighing a direct BBA route against a later MBA",
       "Graduates evaluating specialisation strength over college brand alone",
-      "Working professionals considering a sponsored or executive route",
+      "Working professionals considering a sponsored or executive MBA route",
       "Anyone weighing total cost against realistic placement outcomes",
     ],
     eligibility: [
-      "A recognised bachelor's degree in any discipline",
+      "For BBA: a pass in 10+2 in any stream, plus any college-specific entrance test or merit criteria",
+      "For MBA/PGDM: a recognised bachelor's degree in any discipline",
       "Minimum aggregate as prescribed by the college or affiliating university",
-      "A valid entrance score where required (CAT, MAT, CMAT or the relevant state CET)",
+      "A valid entrance score where required (CAT, MAT, CMAT or the relevant state CET for MBA; college-specific tests such as NPAT or SET for BBA)",
     ],
     seatCategories: [
       { name: "Management quota", note: "Seats filled directly by the institute, outside centralised counseling." },
@@ -146,12 +148,12 @@ export const programs: Program[] = [
       "Passport-size photographs and ID proof",
     ],
     timelineNote:
-      "MBA management quota admissions stay open longer than engineering or medicine, often into the start of the term, but specialization seats fill earlier.",
+      "BBA/MBA management quota admissions stay open longer than engineering or medicine, often into the start of the term, but specialization seats fill earlier.",
     faqs: [
       {
-        question: "Do I need CAT or MAT for a management quota MBA seat?",
+        question: "Do I need CAT or MAT for a management quota BBA/MBA seat?",
         answer:
-          "It depends on the institute. Many autonomous business schools admit through their own process or accept CMAT/MAT scores with a lower cutoff for management quota seats. We'll match you to institutes that fit your profile.",
+          "It depends on the level and the institute. MBA seats often expect a CAT/MAT/CMAT score, though many autonomous business schools admit through their own process or accept a lower cutoff for management quota seats. BBA seats are usually filled through 12th-grade marks or a college-specific test rather than CAT/MAT. We'll match you to institutes that fit your profile.",
       },
       {
         question: "How much does placement quality actually vary by college?",

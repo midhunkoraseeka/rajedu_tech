@@ -17,7 +17,7 @@ export const cities: City[] = [
       "One of India's largest clusters of private engineering and medical colleges, with a wide spread of fee brackets across Telangana's counseling and management quota routes.",
     strengths: [
       "Deep bench of engineering colleges across every major branch",
-      "Established private medical colleges with long placement histories",
+      "Established government medical colleges with long teaching-hospital histories",
       "Business schools affiliated with Osmania University and other state universities",
     ],
   },

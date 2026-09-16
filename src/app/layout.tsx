@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     template: `%s — ${SITE_NAME}`,
   },
   description:
-    "Raj Edutech is an independent admission guidance consultancy helping students and parents navigate management quota BTech, MBBS and MBA admissions in Hyderabad, Bangalore and Chennai.",
+    "Raj Edutech is an independent admission guidance consultancy helping students and parents navigate management quota BTech, MBBS and BBA/MBA admissions in Hyderabad, Bangalore and Chennai.",
   keywords: [
     "management quota admission",
     "BTech management quota",
     "MBBS management quota",
-    "MBA admission guidance",
+    "BBA/MBA admission guidance",
     "admission consultancy Hyderabad",
     "admission consultancy Bangalore",
     "admission consultancy Chennai",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description:
-      "Independent guidance through management quota BTech, MBBS and MBA admissions — college selection, documentation and the full admission process, explained clearly.",
+      "Independent guidance through management quota BTech, MBBS and BBA/MBA admissions — college selection, documentation and the full admission process, explained clearly.",
     url: SITE_URL,
     locale: "en_IN",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description:
-      "Independent guidance through management quota BTech, MBBS and MBA admissions in Hyderabad, Bangalore and Chennai.",
+      "Independent guidance through management quota BTech, MBBS and BBA/MBA admissions in Hyderabad, Bangalore and Chennai.",
   },
   alternates: {
     canonical: "/",
@@ -49,7 +49,7 @@ const organizationJsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
   description:
-    "Independent admission guidance consultancy for management quota BTech, MBBS and MBA admissions in Hyderabad, Bangalore and Chennai.",
+    "Independent admission guidance consultancy for management quota BTech, MBBS and BBA/MBA admissions in Hyderabad, Bangalore and Chennai.",
   url: SITE_URL,
   areaServed: ["Hyderabad", "Bangalore", "Chennai"],
 };

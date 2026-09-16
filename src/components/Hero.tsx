@@ -24,7 +24,7 @@ export function Hero() {
           <Reveal variants={fadeUp} delay={0.16}>
             <p className="mt-5 max-w-lg text-[16.5px] leading-relaxed text-ink-soft">
               Expert guidance for management quota admissions in BTech, MBBS
-              and MBA across colleges in Hyderabad, Bangalore and Chennai.
+              and BBA/MBA across colleges in Hyderabad, Bangalore and Chennai.
             </p>
           </Reveal>
           <Reveal variants={fadeUp} delay={0.24}>

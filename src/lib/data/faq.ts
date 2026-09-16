@@ -21,7 +21,7 @@ export const faqs: FaqItem[] = [
     category: "General",
     question: "Which cities and programmes do you cover?",
     answer:
-      "We currently guide students for BTech, MBBS and MBA management quota admissions in Hyderabad, Bangalore and Chennai.",
+      "We currently guide students for BTech, MBBS and BBA/MBA management quota admissions in Hyderabad, Bangalore and Chennai.",
   },
   {
     category: "Process",

@@ -10,7 +10,7 @@ import { programs } from "@/lib/data/programs";
 export const metadata: Metadata = {
   title: "The Admission Process",
   description:
-    "The six steps Raj Edutech follows for every management quota BTech, MBBS and MBA admission — from your first conversation to settling in after admission.",
+    "The six steps Raj Edutech follows for every management quota BTech, MBBS and BBA/MBA admission — from your first conversation to settling in after admission.",
   alternates: { canonical: "/admission-process" },
 };
 
@@ -26,7 +26,7 @@ export default function AdmissionProcessPage() {
           <p className="mt-5 text-[17px] leading-relaxed text-ink-soft">
             Every family we work with goes through the same structured
             process, regardless of programme or city. Timelines shift — MBBS
-            moves faster than MBA — but the steps themselves don&apos;t.
+            moves faster than BBA/MBA — but the steps themselves don&apos;t.
           </p>
         </Container>
       </Section>

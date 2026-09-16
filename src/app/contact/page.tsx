@@ -9,7 +9,7 @@ import { PHONE_DISPLAY, PHONE_TEL, EMAIL, whatsappLink, CITIES_SERVED } from "@/
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Talk to Raj Edutech about management quota BTech, MBBS and MBA admission guidance in Hyderabad, Bangalore and Chennai — by phone, WhatsApp or email.",
+  description: "Talk to Raj Edutech about management quota BTech, MBBS and BBA/MBA admission guidance in Hyderabad, Bangalore and Chennai — by phone, WhatsApp or email.",
   alternates: { canonical: "/contact" },
 };
 

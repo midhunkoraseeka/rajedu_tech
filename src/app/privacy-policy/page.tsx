@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
             <p className="mt-3">When you submit an enquiry, contact form, or message us directly, we may collect:</p>
             <ul className="mt-3 flex flex-col gap-2">
               <li>Your name, phone number and email address</li>
-              <li>Your preferred programme (BTech, MBBS or MBA) and city</li>
+              <li>Your preferred programme (BTech, MBBS or BBA/MBA) and city</li>
               <li>Academic details you choose to share, such as exam scores, to help us give relevant guidance</li>
               <li>Any documents you share with us during the admission process, for the purpose of verification and guidance</li>
             </ul>

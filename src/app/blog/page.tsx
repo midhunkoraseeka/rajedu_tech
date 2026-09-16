@@ -8,7 +8,7 @@ import { blogPosts } from "@/lib/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Practical, specific guidance on management quota admissions — documentation, fees, timelines and college selection for BTech, MBBS and MBA.",
+  description: "Practical, specific guidance on management quota admissions — documentation, fees, timelines and college selection for BTech, MBBS and BBA/MBA.",
   alternates: { canonical: "/blog" },
 };
 

@@ -18,7 +18,7 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 export const metadata: Metadata = {
   title: "Admissions",
   description:
-    "Everything you need to start a management quota BTech, MBBS or MBA admission with Raj Edutech — who we help, how the process works, and how to get guidance.",
+    "Everything you need to start a management quota BTech, MBBS or BBA/MBA admission with Raj Edutech — who we help, how the process works, and how to get guidance.",
   alternates: { canonical: "/admissions" },
 };
 
@@ -53,7 +53,7 @@ export default function AdmissionsPage() {
           </h1>
           <p className="mt-5 text-[17px] leading-relaxed text-ink-soft">
             One page that brings together who we help, how the process
-            works, and how to get guidance — for BTech, MBBS and MBA
+            works, and how to get guidance — for BTech, MBBS and BBA/MBA
             management quota admissions across Hyderabad, Bangalore and
             Chennai.
           </p>

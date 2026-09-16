@@ -8,7 +8,7 @@ import { testimonials } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
   title: "Testimonials",
-  description: "What parents and students say about navigating management quota BTech, MBBS and MBA admissions with Raj Edutech.",
+  description: "What parents and students say about navigating management quota BTech, MBBS and BBA/MBA admissions with Raj Edutech.",
   alternates: { canonical: "/testimonials" },
 };
 

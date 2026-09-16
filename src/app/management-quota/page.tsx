@@ -10,7 +10,7 @@ import { programs } from "@/lib/data/programs";
 export const metadata: Metadata = {
   title: "Management Quota Admissions Explained",
   description:
-    "What management quota admission actually means for BTech, MBBS and MBA seats — how it differs from counseling, who it suits, and what to verify before you commit.",
+    "What management quota admission actually means for BTech, MBBS and BBA/MBA seats — how it differs from counseling, who it suits, and what to verify before you commit.",
   alternates: { canonical: "/management-quota" },
 };
 
@@ -105,7 +105,7 @@ export default function ManagementQuotaPage() {
           <SectionHeading
             eyebrow="Explore by Programme"
             title="Choose Your Path"
-            description="Eligibility, seat categories and documentation differ across BTech, MBBS and MBA. Start with yours."
+            description="Eligibility, seat categories and documentation differ across BTech, MBBS and BBA/MBA. Start with yours."
           />
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {programs.map((program) => (

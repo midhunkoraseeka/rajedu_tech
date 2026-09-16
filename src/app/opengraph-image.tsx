@@ -46,7 +46,7 @@ export default function OgImage() {
             {SITE_TAGLINE}
           </div>
           <div style={{ display: "flex", gap: 12 }}>
-            {["BTech", "MBBS", "MBA"].map((p) => (
+            {["BTech", "MBBS", "BBA/MBA"].map((p) => (
               <div
                 key={p}
                 style={{
