@@ -37,7 +37,11 @@ export function ManagementQuotaSection() {
 
         <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2" stagger={0.08}>
           {helpPoints.map((p) => (
-            <Reveal key={p.title} variants={fadeUp} className="rounded-2xl border border-border bg-white p-6">
+            <Reveal
+              key={p.title}
+              variants={fadeUp}
+              className="rounded-2xl border border-border bg-white p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/25 hover:shadow-md hover:shadow-blue-dark/5"
+            >
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-light text-blue">
                 <p.icon className="h-5 w-5" />
               </span>
